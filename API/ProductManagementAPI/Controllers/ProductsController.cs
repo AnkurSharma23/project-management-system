@@ -6,5 +6,8 @@ namespace API.ProductManagementAPI.Controllers;
 [Route("api/controler")]
 public class ProductsController : Controller
 {
-    
+    [HttpGet]
+    public IActionResult GetAllProducts(){
+        
+    } 
 }
