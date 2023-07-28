@@ -3,6 +3,9 @@ namespace API.ProductManagementAPI.Filters;
 using global::Application.Common.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using System.Linq;
+using System.Collections.Generic;
+using System;
 
 public sealed class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 {
@@ -76,8 +79,8 @@ public sealed class ApiExceptionFilterAttribute : ExceptionFilterAttribute
         {
             Type = "404 Internal Error.",
             Status = StatusCodes.Status404NotFound,
-            Title = exception.Message ?? "The specified resource was not found.",
-            Detail = exception.Message
+            Title = exception?.Message ?? "The specified resource was not found.",
+            Detail = exception?.Message
         };
 
         context.Result = new NotFoundObjectResult(details);
