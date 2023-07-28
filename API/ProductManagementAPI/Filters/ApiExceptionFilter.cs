@@ -1,5 +1,6 @@
 namespace API.ProductManagementAPI.Filters;
 
+using global::Application.Common.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 

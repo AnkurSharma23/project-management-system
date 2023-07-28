@@ -7,7 +7,8 @@ namespace API.ProductManagementAPI.Controllers;
 public class ProductsController : Controller
 {
     [HttpGet]
-    public IActionResult GetAllProducts(){
-        
+    public IActionResult GetAllProducts()
+    {
+        throw new NotImplementedException();
     } 
 }
