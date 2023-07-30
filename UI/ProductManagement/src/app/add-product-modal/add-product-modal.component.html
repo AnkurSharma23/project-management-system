@@ -1,16 +1,53 @@
-<h1 mat-dialog-title>Add Products</h1>
-<div mat-dialog-content>
-    <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Product Name">
-    </mat-form-field>
+<div>
+    <h1 mat-dialog-title>Add Products</h1>
+    <div mat-dialog-content style="overflow: visible;">
+        <form [formGroup]="productsForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Product Name">
+            </mat-form-field>
 
-    <mat-form-field appearance="outline">
-        <mat-label>Categories</mat-label>
-        <mat-select placeholder="Product Category">
-            <mat-option value="">Fruits</mat-option>
-            <mat-option value="">Vegetables</mat-option>
-            <mat-option value="">Electronics</mat-option>
-        </mat-select>
-    </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Product Code</mat-label>
+                <input matInput placeholder="Product Code">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Quantity</mat-label>
+                <input type="number" matInput placeholder="Quantity">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <input matInput placeholder="Description">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Categories</mat-label>
+                <mat-select placeholder="Product Category">
+                    <mat-option value="">Electronics</mat-option>
+                    <mat-option value="">Apparel</mat-option>
+                    <mat-option value="">Footwear</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Subcategories</mat-label>
+                <mat-select placeholder="Product Category">
+                    <mat-option value="">TV</mat-option>
+                    <mat-option value="">Mobile</mat-option>
+                    <mat-option value="">Refrigerator</mat-option>
+                    <mat-option value="">Men's Clothes</mat-option>
+                    <mat-option value="">Women's Clothes</mat-option>
+                    <mat-option value="">Men's Footwear</mat-option>
+                    <mat-option value="">Women's Footwear</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <div mat-dialog-actions [align]="'end'">
+                <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+                <button style="margin-left: 8px;" mat-raised-button color="primary">Submit</button>
+            </div>
+        </form>
+    </div>
 </div>
